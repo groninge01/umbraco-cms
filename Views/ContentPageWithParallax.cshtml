@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ContentPageWithParallax>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+	
+	 //We are using the TypedMedia method off of the Umbraco helper to retrieve our media item based on its ID.
+    var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue<int>("parallaxImage"));        
+
+    //To get the url for your media item, you use the Url property on your media item.
+    var url = mediaItem.Url;
+}
+
+<main>
+    <div class="parallax-container valign-wrapper pad-top">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center">
+            <h2 class="header col s12 bold blue-grey-text text-darken-3">@Umbraco.Field("parallaxTitle")</h2>
+            <h5 class="header col s12 black-text">@Umbraco.Field("parallaxSubscript")</h5>
+          </div>
+        </div>
+      </div>
+      <div class="parallax"><img src="@url" alt="@mediaItem.Name"></div>
+    </div>
+
+    <div class="container">
+      <div class="section">
+
+        <div class="row">
+          <div class="col s12 center">
+            @Umbraco.Field("bodyText")
+          </div>
+        </div>
+      </div>
+    </div>
+</main>

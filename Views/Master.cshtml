@@ -1,0 +1,117 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48697210-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-48697210-1');
+  </script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="index, follow, archive">
+  <meta name="googlebot" content="index, follow, archive">
+  <meta name="description" content="Personal Trainer Winfred van Groningen maakt je fitter en sterker door personal training, circuit training, running en gezond te laten leven">
+  <meta name="keywords" content="personal training, personal trainer, circuittraining, running, small group training, bewustwording, workout, vita support, abonnement">
+
+  <title>VitaSupport | Personal Training, Circuittraining &amp; Running | Alkmaar</title>
+
+  <!-- CSS  -->
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.1/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <!-- Cookie Consent -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#000"
+        },
+        "button": {
+          "background": "#f1d600"
+        }
+      }
+    })});
+    </script>
+</head>
+<body>
+  <header>
+
+    <div class="navbar-fixed">
+      <nav class="white">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#!" class="brand-logo right">VitaSupport</a>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+          <ul class="left hide-on-med-and-down">
+            <li><a href="/">Personal Training</a></li>
+            <li><a href="/circuit-training">Circuit Training</a></li>
+            <li><a href="/running">Running</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <ul id="nav-mobile" class="sidenav">
+      <li><a class="sidenav-close" href="/">Personal Training</a></li>
+      <li><a class="sidenav-close" href="/circuit-training">Circuit Training</a></li>
+      <li><a class="sidenav-close" href="/running">Running</a></li>
+      <li><a class="sidenav-close" href="/contact">Contact</a></li>
+    </ul>
+  </header>
+	
+	@RenderBody()
+	
+    <footer class="page-footer blue-grey darken-3">
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="left">
+                  <a class="blue-grey-text text-lighten-3" href=/files/algemene_voorwaarden_vitasupport.pdf target="_blank">Algemene voorwaarden</a>&nbsp;&nbsp;
+                  <a class="blue-grey-text text-lighten-3" href=/files/privacy_verklaring.pdf target="_blank">Privacy verklaring</a>
+                </div>
+              <div class="right">&nbsp;</div>
+              <div class="right">
+                &copy; 2018 Made with joy and <a class="blue-grey-text text-lighten-3" href="http://materializecss.com" target="_blank">MaterializeCSS</a> by <a class="blue-grey-text text-lighten-3" href="https://www.stefanvangroningen.com" target="_blank">Stefan van Groningen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+<!--  Scripts-->
+  <noscript id="deferred-styles">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+  </noscript>
+  <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+  </script>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.1/js/materialize.min.js"></script>
+  <script src="/scripts/init.js"></script>
+
+  </body>
+</html>
